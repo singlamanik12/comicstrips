@@ -1,0 +1,5 @@
+Complete the following files
+- index.php
+- /comicstrips/insert.php
+- /comicstrips/edit.php
+- /comicstrips/update.php
