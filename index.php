@@ -6,7 +6,10 @@
     2: Fetch all the comicstrips rows from the database and display them in a table.
     3: Create two links for each row that point to the edit.php and delete.php files. These links must provide a query parameter called 'id' with the row's id column's value.
 -->
+
 <?php
+ require_once('_utilities/_connect.php');
+ $conn = connect();
   $result = mysqli_query($conn, "SELECT * FROM comicstrips");
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
   ?>
@@ -30,9 +33,9 @@
     <?php
       foreach ($rows as $row) {
         echo "<tr>";
-        echo "<td>{$row['name']}</td>";
-        echo "<td>{$row['description']}</td>";
-        echo "<td>{$row['population']}</td>";
+        echo "<td>{$row['title']}</td>";
+        echo "<td>{$row['newspaper']}</td>";
+        echo "<td>{$row['date']}</td>";
         echo "<td>";
         echo "<a href='./edit_form.php?id={$row['id']}'>edit</a>";
         echo " | ";
