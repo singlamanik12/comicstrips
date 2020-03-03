@@ -1,7 +1,7 @@
 <?php
 
   require_once('../_config.php');
-  include_once('_utilities/_connect.php') 
+  require_once('_utilities/_connect.php') 
     /*
     OBJECTIVE:
       1: Connect to the database and update the values from the passed form
@@ -10,6 +10,7 @@
       or an error message (if it failed).
       3: Redirect to notification.php.
   */
+  $conn=connect();
   $res = mysqli_query($conn, "UPDATE comicstrips SET
   title = '{$_POST['title']}',
   newspaper = '{$_POST['newspaper']}',

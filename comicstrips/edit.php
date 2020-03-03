@@ -9,7 +9,10 @@
     4: Pre-populate the form with the values from the selected row.
     5: Ensure you're sending the form data to the update.php page.
 -->
+
 <?php
+	require_once('_utilities/_connect.php');
+	$conn=connect();
 	$result = mysqli_query($conn, "SELECT * FROM comicstrips WHERE id = {$_GET['id']}");
   	$row = mysqli_fetch_assoc($result);
   ?>

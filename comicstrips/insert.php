@@ -10,7 +10,9 @@
       or an error message (if it failed).
       3: Redirect to notification.php.
   */
-  include_once('_utilities/_connect.php') 
+  
+  require_once('_utilities/_connect.php');
+  $conn = connect();
   $res = mysqli_query($conn, "INSERT INTO comicstrips (
     title,
     newspaper,
@@ -32,6 +34,6 @@
     $_SESSION['notification'] = "There was an error creating the record: " . mysqli_error($conn);
   }
 
-  header("Location: ./notification.php");
+  header("Location: ../notification.php");
   exit;
 ?>

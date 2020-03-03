@@ -1,7 +1,7 @@
 <?php
 
   require_once('./_config.php');
-
+  
   /*
     OBJECTIVE:
       1: Check the session for a 'notification' key and if there's a value:
