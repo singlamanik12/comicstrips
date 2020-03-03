@@ -22,7 +22,7 @@
 </header>
 
 <form action="<?= BASE_PATH ?>/comicstrips/update.php" method='post'>
-	<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+	<input class="form-control" type="hidden" name="id" value="<?php echo $row['id']; ?>">
 	<div class='form-group'>
 		<label>Title</label>
 		<input class="form-control" type="text" name="title" value="<?php echo $row['title']; ?>">
