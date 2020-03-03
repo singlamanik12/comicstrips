@@ -21,7 +21,7 @@
   <hr>
 </header>
 
-<form action='<?= BASE_PATH ?>/comicstrips/update.php' method='post'>
+<form action="<?= BASE_PATH ?>/comicstrips/update.php" method='post'>
 	<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 	<div class='form-group'>
 		<label>Title</label>

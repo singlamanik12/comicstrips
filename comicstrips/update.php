@@ -17,11 +17,16 @@
   date = {$_POST['date']}
   WHERE id = {$_POST['id']}");
 
-if ($res) {
-  // We were successful
-  echo "The comicstrip was updated successfully.";
-} else {
-  // We failed
-  echo "There was an error updating the record: " . mysqli_error($conn);
-}
+session_start();
+
+  if ($res) {
+    // We were successful
+    $_SESSION['notification'] = "The new comicstrip was created successfully.";
+  } else {
+    // We failed
+    $_SESSION['notification'] = "There was an error creating the record: " . mysqli_error($conn);
+  }
+
+  header("Location: ../notification.php");
+  exit;
 ?>
