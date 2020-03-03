@@ -37,9 +37,9 @@
         echo "<td>{$row['newspaper']}</td>";
         echo "<td>{$row['date']}</td>";
         echo "<td>";
-        echo "<a href='/comicstrips/edit_form.php?id={$row['id']}'>edit</a>";
+        echo '<a href="'. BASE_PATH .'/comicstrips/edit.php?id={$row['id']}">edit</a>';
         echo " | ";
-        echo "<a href='/comicstrips/delete.php?id={$row['id']}'>delete</a>";
+        echo '<a href="'. BASE_PATH .'/comicstrips/delete.php?id={$row['id']}">Delete</a>';
         echo"</td>";
         echo "</tr>";
       }
