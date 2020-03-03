@@ -14,7 +14,7 @@
   $res = mysqli_query($conn, "UPDATE comicstrips SET
   title = '{$_POST['title']}',
   newspaper = '{$_POST['newspaper']}',
-  'date' = {$_POST['date']}
+  date = '{$_POST['date']}'
   WHERE id = {$_POST['id']}");
 
 session_start();
